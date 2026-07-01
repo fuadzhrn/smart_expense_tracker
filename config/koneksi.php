@@ -8,13 +8,13 @@ $db_user = 'root';
 $db_pass = '';
 $db_name = 'smart_expense_tracker';
 
-$koneksi = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
-if (!$koneksi) {
+if (!$conn) {
     die('Koneksi database gagal: ' . mysqli_connect_error());
 }
 
-mysqli_set_charset($koneksi, 'utf8mb4');
+mysqli_set_charset($conn, 'utf8mb4');
 
 // BASE_URL dihitung otomatis agar semua link/asset tetap benar
 // baik project diakses lewat http://localhost/Smart_Expense_Tracker/

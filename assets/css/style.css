@@ -221,9 +221,32 @@ button, input, select, textarea {
     flex-wrap: wrap;
 }
 
+.table-card {
+    margin-bottom: 24px;
+}
+
+.table-card:last-child {
+    margin-bottom: 0;
+}
+
 .card-header h2 {
     font-size: 16px;
     font-weight: 600;
+}
+
+/* Page intro */
+
+.page-intro {
+    margin-bottom: 20px;
+}
+
+.page-welcome {
+    color: var(--muted);
+    font-size: 13.5px;
+}
+
+.page-welcome strong {
+    color: var(--text);
 }
 
 /* Summary cards */
@@ -407,6 +430,23 @@ button, input, select, textarea {
     color: var(--danger);
 }
 
+.amount-positive {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.amount-negative {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px 12px !important;
+    white-space: normal !important;
+}
+
 /* =========================================================
    Forms
 ========================================================= */
@@ -426,7 +466,8 @@ button, input, select, textarea {
 
 .form-group input,
 .form-group select,
-.form-group textarea {
+.form-group textarea,
+.form-control {
     padding: 10px 12px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
@@ -434,12 +475,14 @@ button, input, select, textarea {
     color: var(--text);
     background-color: var(--card);
     outline: none;
+    width: 100%;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-control:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px var(--primary-tint);
 }
@@ -467,7 +510,7 @@ button, input, select, textarea {
    Auth pages (login / register)
 ========================================================= */
 
-.auth-page {
+.auth-wrapper {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -496,6 +539,14 @@ button, input, select, textarea {
     font-size: 19px;
     color: var(--primary);
     margin-bottom: 6px;
+}
+
+.auth-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 .auth-subtitle {
@@ -597,5 +648,9 @@ button, input, select, textarea {
     .card-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .auth-card {
+        padding: 24px 20px;
     }
 }
