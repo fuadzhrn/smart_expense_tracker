@@ -315,6 +315,11 @@ button, input, select, textarea {
     font-weight: 700;
 }
 
+.summary-value-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 /* =========================================================
    Buttons
 ========================================================= */
@@ -543,10 +548,12 @@ button, input, select, textarea {
 
 .filter-form .form-group {
     margin-bottom: 0;
+    flex: 1 1 180px;
 }
 
 .filter-form .btn {
     height: 41px;
+    flex: 0 0 auto;
 }
 
 /* =========================================================
@@ -630,6 +637,17 @@ button, input, select, textarea {
 .alert-success {
     background-color: var(--success-tint);
     color: var(--success);
+}
+
+.alert-warning {
+    background-color: var(--warning-tint);
+    color: var(--warning);
+}
+
+.alert-warning a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 /* =========================================================
