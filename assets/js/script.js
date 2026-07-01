@@ -11,6 +11,24 @@ function confirmDelete(message) {
 }
 
 /**
+ * Tampilkan/sembunyikan card form tambah data (mis. Tambah Pemasukan, Tambah Kategori).
+ * Dipakai lewat: onclick="toggleFormCard('idCardForm')"
+ */
+function toggleFormCard(id) {
+    var card = document.getElementById(id);
+    if (!card) {
+        return;
+    }
+
+    if (card.style.display === 'none') {
+        card.style.display = 'block';
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        card.style.display = 'none';
+    }
+}
+
+/**
  * Toggle sidebar untuk tampilan layar kecil.
  */
 document.addEventListener('DOMContentLoaded', function () {

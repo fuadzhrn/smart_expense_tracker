@@ -1,13 +1,9 @@
 <?php
 require_once __DIR__ . '/../includes/auth_check.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $pageTitle = 'Dashboard';
 $userId    = (int) $_SESSION['user_id'];
-
-function formatRupiah($angka)
-{
-    return 'Rp' . number_format((float) $angka, 0, ',', '.');
-}
 
 // --- Total pemasukan ---
 $stmt = mysqli_prepare($conn, 'SELECT COALESCE(SUM(amount), 0) AS total FROM incomes WHERE user_id = ?');

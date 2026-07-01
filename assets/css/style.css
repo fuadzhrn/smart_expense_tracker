@@ -340,6 +340,16 @@ button, input, select, textarea {
     background-color: var(--primary-dark);
 }
 
+.btn-secondary {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg);
+}
+
 .btn-block {
     width: 100%;
 }
@@ -485,6 +495,39 @@ button, input, select, textarea {
 .form-control:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px var(--primary-tint);
+}
+
+.toolbar-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    margin-bottom: 24px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.grid-form-2 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.grid-form .form-group {
+    margin-bottom: 0;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    margin-top: 4px;
 }
 
 .filter-card {
@@ -652,5 +695,17 @@ button, input, select, textarea {
 
     .auth-card {
         padding: 24px 20px;
+    }
+
+    .toolbar-actions {
+        justify-content: stretch;
+    }
+
+    .toolbar-actions .btn {
+        width: 100%;
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr;
     }
 }
